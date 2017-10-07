@@ -12,7 +12,7 @@
 
   var database = firebase.database()
 
-  var randomArtistArray = ["Coldplay", "Muse", "Radiohead", "Queens of the Stone Age"]
+  var randomArtistArray = ["Coldplay", "Muse", "Radiohead", "Queens of the Stone Age", "Incubus", "Dr. Dre", "Eminem", "Fall Out Boy", "Jay Z", "Beyonce", "Metallica"]
 
     var randomArtist =""
   $("#random-button").on("click", function() {
