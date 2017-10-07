@@ -14,16 +14,18 @@
 
   var randomArtistArray = ["Coldplay", "Muse", "Radiohead", "Queens of the Stone Age"]
 
+    var randomArtist =""
   $("#random-button").on("click", function() {
      var randomNumber = Math.floor(Math.random() * randomArtistArray.length)
-     randomArtistArray[randomNumber]
+     //randomArtistArray[randomNumber]
      $("#artist-name-input").empty()
-     console.log($("#artist-name-input").val())
+     //console.log($("#artist-name-input").val())
 
-     var randomArtist = randomArtistArray[randomNumber]
+     randomArtist = randomArtistArray[randomNumber]
 
      $("#artist-name-input").val(randomArtist)
      console.log($("#artist-name-input").val())
+     console.log("123123")
     wiki()
     musicgraph()
 
@@ -62,8 +64,7 @@
     // $("#artist-name-input").val("")
 
     // Create Firebase event for adding artists to the database and a row in the html when a user adds an entry
-
-  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+database.ref("child_added").orderByChild("dateAdded").limitToLast(1).on("child_added", function(childSnapshot) {
 
 console.log(childSnapshot.val())
 
@@ -188,23 +189,28 @@ console.log(wikiSearch)
 
           var thisButton = $(this).attr('id');
           console.log(thisButton)
-          if(thisButton == "artist-search-btn" || thisButton == "random-button") {
-            console.log("123123")
-            hasSearch = false;
+          //if you click the artist-search-btn get the input from user
+          if(thisButton == "artist-search-btn") {
+            randomArtist =""//clear randomArtist when we do a regular search
+            //console.log("123123")
+            toSearch = input.val();
+            //wikiSearch = toSearch;
+            //hasSearch = true;
           }
-        if(hasSearch == false) {
-          toSearch = input.val();
-          wikiSearch = toSearch;
-          hasSearch = true;
-        }
-        else if (hasSearch == true) {
-          wikiSearch = toSearch;
-        }
+          else if(thisButton == "bio-button") {//if the bio-button was clicked
+            console.log(randomArtist)
 
-
-        
-        wikiSearch = toSearch
-        console.log("123")
+            if(randomArtist)//if there is a randomArtist set the wiki search to it
+            {
+              toSearch = randomArtist;
+            }
+          }
+          else {//not artist-search or bio-button
+            console.log("")
+            toSearch=randomArtist;
+          }
+        //wikiSearch = toSearch
+        console.log("cool monkey2")
         ajaxArticleData();
     // });
 // })
