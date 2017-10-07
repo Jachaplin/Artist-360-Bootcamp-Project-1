@@ -64,7 +64,8 @@
     // $("#artist-name-input").val("")
 
     // Create Firebase event for adding artists to the database and a row in the html when a user adds an entry
-database.ref("child_added").orderByChild("dateAdded").limitToLast(1).on("child_added", function(childSnapshot) {
+    //firebase
+database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(childSnapshot) {
 
 console.log(childSnapshot.val())
 
