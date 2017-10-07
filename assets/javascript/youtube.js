@@ -61,7 +61,7 @@ function tplawesome(e,t){//e=data of item.html,
             // Trying to Refine the YouTube Search
             //q: "music -cover -mashup" + encodeURIComponent($("#song-input").val()).replace(/%20/g, "+"),
             
-            maxResults: 6,
+            maxResults: 10,
             order: "viewCount",
             //publishedAfter: "2015-01-01T00:00:00Z"
        }); 
