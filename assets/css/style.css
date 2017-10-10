@@ -1,0 +1,199 @@
+body { 
+	padding-top: 70px;
+	background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+	  url("../images/concert.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: black;
+
+}
+
+#jumbotron-header {
+	margin-top: -70px;
+	margin-bottom: 30px;
+	overflow: auto;
+	background-image: url("../images/Orange Audience.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center -70px;
+	background-attachment: fixed;
+	color: steelblue;
+	text-shadow: 0 1px 0 black;
+}
+
+#jumbotron-twitter {
+	background-image: url("../images/TwitterLogoSmall.png");
+	background-size: 100px auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 70px;
+	background-color: black;
+}
+
+#jumbotron-spotify {
+	background-image: url("../images/SpodifyLogo.png");
+  background-size: 100px auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 70px;
+	background-color: black;
+}
+
+/*#search {
+	
+	float: right;
+	overflow: auto;
+}*/
+
+#recent-search-table {
+	padding-bottom: 400px;
+}
+
+#recent-search {
+	background-color: black;
+	margin-top: -20px;
+	color: white;
+}
+
+button {
+	margin: -1px;
+
+	/*display: inline-block;
+	padding: 13px !important;*/
+
+}
+
+#youtube-button {
+	font-size: 25px !important;
+	padding: 10px;
+	border-right: 1px solid black !important;
+	
+}
+
+#bio-button {
+	font-size: 25px !important;
+	padding: 10px;
+	border-right: 1px solid black !important;
+	
+}
+
+#random-button {
+	font-size: 25px !important;
+	padding: 10px;
+	
+}
+
+#footer-buttons {
+	/*padding: 20px;*/
+}
+
+#search-button {
+	font-size: 19px;
+	float: right;
+	border: .5px solid black;
+	
+}
+
+#footer {
+	background-color: black;
+	padding: 2px;
+	border-top: 1px solid black;
+}
+
+#footer-spacing {
+	padding: 35px;
+	background-color: transparent;
+}
+
+.artist-image {
+	width: 300px;
+	height: auto;
+}
+
+#jumbotron-content {
+	background-color: black;
+	color: white;
+}
+
+#content {
+	overflow: auto;
+
+}
+
+h1 {
+	font-family: 'Lobster' !important;
+	font-size: 800% !important;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	float: auto;
+	width: 90%;
+	padding: 20px;
+	font-size: 20px;
+	color: white;
+	margin-top: 10px;
+	line-height: 30px;
+
+}
+
+label {
+	color: white;
+	font-size: 16px;
+}
+
+/*#modal-boarder {
+	border-bottom: 4px solid white !important;
+}*/
+
+.modal-content {
+	background-color: black;
+	height: 545px;
+	border: 1px solid lightgrey;
+
+}
+
+
+
+#modal-image {
+	padding: 150px;
+	margin-bottom: 30px;
+	background-image: url("../images/modal image.jpg?i10c=img.resize(height:160)");
+
+}
+
+
+.wiki-image {
+	width: 50%;
+	height: auto;
+	float: left;
+	padding: 20px;
+	position: relative;
+	top: 10px;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+/*.search-input[type=text] {
+    width: 15%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    float: right;
+}
+
+ When the input field gets focus, change its width to 30% 
+.search-input[type=text]:focus {
+    width: 30%;
+}*/

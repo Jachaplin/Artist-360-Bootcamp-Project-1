@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name=“viewport” content=“width=device-width, initial-scale=1”>
+	<!-- Reset -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Wiki CSS -->
+ <!--   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" /> -->
+	<!-- Our CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+		<title>Artist 360</title>
+
+</head>
+<body>
+	
+  <div class="container">
+    <br>
+    <!-- Header -->
+    <div id="jumbotron-header" class="jumbotron">
+      <h1 class="text-center">Artist 360</h1>
+      <!-- Search -->
+      <!-- <input class="search-input" type="text" name="search" placeholder="Search..">
+    </div> -->
+    <!-- Search Button Modal -->
+      <button id="search-button" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search..</button>
+      
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Artist Search</h3>
+              </div>
+            </div>
+            <div class="panel-body">
+              <!-- Artist Search Form (note the various input "types")-->
+              <form id="input-style" role="form">
+                <!-- <div class="form-group">
+                  <label for="genre-input">Genre</label>
+                  <select id="genre-input" class="form-control">
+                    <option>-</option>
+                    <option>Rock</option>
+                    <option>Pop</option>
+                    <option>Alternative</option>
+                    <option>Rap</option>
+                    <option>Country</option>
+                    <option>Jazz</option>
+                    <option>Blues</option>
+                  </select>
+                </div> -->
+                <div id="modal-image">
+                </div>
+                <div class="form-group">
+                  <label for="artist-name-input">Artist | Band</label>
+                  <input class="form-control" id="artist-name-input" type="text" placeholder="Search...">
+                </div>
+                <!-- <div class="form-group">
+                  <label for="song-input">Song</label>
+                  <input class="form-control" id="song-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="album-input">Album</label>
+                  <input class="form-control" id="album-input" type="text">
+                </div> 
+                <div class="form-group">
+                  <label for="release-year-input">Year Released</label>
+                  <input class="form-control" id="release-year-input" type="number">
+                </div> -->
+                 <button class="btn btn-primary" id="artist-search-btn" type="submit" >Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <div class="row">
+      <div class="col-lg-9 col-md-9">
+        <div id="jumbotron-content" class="jumbotron">
+          
+        <div id="content">
+
+        <h1>Search for an Artist!</h1>
+        <!-- Placeholder -->
+     <!--    <h1 class="text-center">Body Placeholder</h1> -->
+        </div>
+      
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+      <!-- Artist Search-->
+        
+        <!-- Spotify Tracks -->
+        <div id="jumbotron-spotify" class="jumbotron">
+
+          <div id="spotify-tracks">
+            <!-- Placeholder -->
+            
+          </div>
+          
+        </div>
+        <!-- Twitter Feed -->
+        <div id="jumbotron-twitter" class="jumbotron">
+
+          <div id="twitter-feed">
+            <!-- Placeholder -->
+            
+          </div>
+          
+        </div>
+        <!-- Search History -->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Global Search Feed</h3>
+          </div>
+        </div>
+          <div class="panel-body" id="recent-search">
+            <table class="table table-hover" id="recent-search-table">
+              <thead>
+                <tr>
+                  <th>Artist/Band</th>
+                  <!-- <th>Song</th> --> 
+                  <!-- <th>Album</th>
+                  <th>Year Released</th>
+                  <th>Label</th> -->
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sticky Footer -->
+  <nav id="footer" class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <div id="footer-buttons" class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button id="youtube-button" type="button" class="btn btn-primary">Youtube</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button id="bio-button" type="button" class="btn btn-primary">Bio</button>
+        </div>
+        <!-- <div class="btn-group" role="group">
+          <button id="tickets-button" type="button" class="btn btn-default">Tickets</button>
+        </div> -->
+        <!-- <div class="btn-group" role="group">
+          <button id="karaoke-button" type="button" class="btn btn-default">Karaoke</button>
+        </div> -->
+        <div class="btn-group" role="group">
+          <button id="random-button" type="button" class="btn btn-primary">Random</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="footer-spacing" class="jumbotron"></div>
+<!-- All Javascript Links -->
+  <!-- jQuery first -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Wiki Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <!-- Firebase Link -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+   <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Firebase Javascript  -->
+<!--   <script type="text/javascript" src="assets/javascript/firebase.js"></script> -->
+  <!-- Wiki Javascript -->
+  <script src="assets/javascript/app.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=init"></script>
+  <!-- Musicgraph Javascript  -->
+  <script type="text/javascript" src="assets/javascript/musicgraphAPI.js"></script>
+  <!-- Youtube Javascript  -->
+  <script type="text/javascript" src="assets/javascript/youtube.js"></script>
+</body>   
+</html>
+
+
+                                  
+            
+                    
+                  
